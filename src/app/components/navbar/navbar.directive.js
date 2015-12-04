@@ -8,6 +8,7 @@ export function NavbarDirective() {
       creationDate: '=',
       appUrl: '=',
       appName: '=',
+      authenticated: '=',
     },
     controller: NavbarController,
     controllerAs: 'vm',

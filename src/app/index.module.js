@@ -12,7 +12,11 @@ import { MalarkeyDirective } from '../app/components/malarkey/malarkey.directive
 import { DataService } from '../app/components/data/data.service';
 import { SessionService } from '../app/components/session/session.service';
 import { AuthorizationService } from '../app/components/authorization/authorization.service';
-import { LoginDirective } from '../app/components/login/login.directive';
+import { LoginButtonDirective } from '../app/components/login/login-button.directive';
+
+import { dashboardRouterConfig } from './main/dashboard/dashboard.route';
+import { DashboardController } from './main/dashboard/dashboard.controller';
+import { dashboardRunBlock } from './main/dashboard/dashboard.run';
 
 angular.module('mumunWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'ngMaterial', 'toastr'])
   .constant('malarkey', malarkey)
@@ -20,6 +24,7 @@ angular.module('mumunWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', '
   .config(config)
   .config(routerConfig)
   .run(runBlock)
+  .run(dashboardRunBlock)
   .service('githubContributor', GithubContributorService)
   .service('webDevTec', WebDevTecService)
   .controller('MainController', MainController)
@@ -30,6 +35,8 @@ angular.module('mumunWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', '
 	.service('data', DataService)
 	.service('session', SessionService)
 	.service('authorization', AuthorizationService)
-  .directive('login', LoginDirective)
+  .directive('loginButton', LoginButtonDirective)
 
+  .config(dashboardRouterConfig)
+  .controller('DashboardController', DashboardController)
 	;

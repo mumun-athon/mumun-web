@@ -1,15 +1,16 @@
-export function LoginDirective() {
+export function LoginFormDirective() {
   'ngInject';
 
   let directive = {
     restrict: 'E',
-    templateUrl: 'app/components/login/login.html',
+    templateUrl: 'app/components/login/login-form.html',
     scope: {
       // toastr: '=',
       // appUrl: '=',
       // appName: '=',
     },
-    controller: LoginController,
+    replace: true,
+    controller: LoginFormController,
     controllerAs: 'vm',
     bindToController: true,
   };
@@ -17,14 +18,15 @@ export function LoginDirective() {
   return directive;
 }
 
-class LoginController {
-  constructor(authorization, session, $log, toastr) {
+class LoginFormController {
+  constructor(authorization, session, $log, toastr, $mdDialog) {
     'ngInject';
 
     // "this.creation" is available by directive option "bindToController: true"
     this.authorization = authorization;
     this.session = session;
     this.$log = $log;
+    this.$mdDialog = $mdDialog;
     this.toastr = toastr;
   }
 

@@ -1,34 +1,23 @@
 export class MainController {
-  constructor($timeout, webDevTec, toastr) {
+  constructor(toastr, authorization) {
     'ngInject';
 
-    this.awesomeThings = [];
     this.classAnimation = '';
     this.creationDate = 1449019394801;
     this.appUrl = 'http://localhost:3000';
     this.appName = 'Cegatan Santai';
     this.toastr = toastr;
+    this.authorization = authorization;
+    this._authenticated;
 
-    this.activate($timeout, webDevTec);
+    this.activate();
   }
 
-  activate($timeout, webDevTec) {
-    this.getWebDevTec(webDevTec);
-    $timeout(() => {
-      this.classAnimation = 'rubberBand';
-    }, 4000);
+  activate() {
   }
 
-  getWebDevTec(webDevTec) {
-    this.awesomeThings = webDevTec.getTec();
-
-    angular.forEach(this.awesomeThings, (awesomeThing) => {
-      awesomeThing.rank = Math.random();
-    });
-  }
-
-  showToastr() {
-    this.toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-    this.classAnimation = '';
+  get authenticated() {
+    this._authenticated = this.authorization.isAuthenticated;
+    return this._authenticated;
   }
 }
