@@ -1,5 +1,5 @@
 export class MainController {
-  constructor(toastr, authorization) {
+  constructor(toastr, authorization, $state) {
     'ngInject';
 
     this.classAnimation = '';
@@ -10,10 +10,14 @@ export class MainController {
     this.authorization = authorization;
     this._authenticated;
 
-    this.activate();
+    this.activate($state);
   }
 
-  activate() {
+  activate($state) {
+    console.log('this.authorization.isAuthenticated', this.authorization.isAuthenticated);
+    if (this.authorization.isAuthenticated) {
+      $state.go('home.dashboard');
+    }
   }
 
   get authenticated() {

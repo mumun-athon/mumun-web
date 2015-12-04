@@ -14,6 +14,8 @@ import { SessionService } from '../app/components/session/session.service';
 import { AuthorizationService } from '../app/components/authorization/authorization.service';
 import { LoginButtonDirective } from '../app/components/login/login-button.directive';
 
+import { FrontpageController } from './main/frontpage/frontpage.controller';
+
 import { dashboardRouterConfig } from './main/dashboard/dashboard.route';
 import { DashboardController } from './main/dashboard/dashboard.controller';
 import { dashboardRunBlock } from './main/dashboard/dashboard.run';
@@ -39,4 +41,5 @@ angular.module('mumunWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', '
 
   .config(dashboardRouterConfig)
   .controller('DashboardController', DashboardController)
+  .controller('FrontpageController', FrontpageController)
 	;
