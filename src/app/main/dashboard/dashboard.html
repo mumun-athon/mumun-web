@@ -1,6 +1,10 @@
 <div layout="row">
-  <div flex>Total laporan: {{dc.reports}}</div>
-  <div flex>Jumlah cegatan hari ini: {{dc.raids}}</div>
+	<div layout="row">
+		<div layout="column">
+		  <div flex>Total laporan: {{dc.reports}}</div>
+		  <div flex>Jumlah cegatan hari ini: {{dc.raids}}</div>
+		</div>
+	</div>
   <panel-widget flex title="Cegatan" template="app/views/partials/peta.html" class="fixed-height-widget"></panel-widget>
 
 </div>

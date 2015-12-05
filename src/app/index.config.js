@@ -14,22 +14,22 @@ export function config($logProvider, toastrConfig, ssSideNavSectionsProvider, $m
   ssSideNavSectionsProvider.initWithSections([
     {
       name: 'Dashboard',
-      state: 'main.dashboard',
+      state: 'home.dashboard',
       type: 'link',
     },
     {
       name: 'Cegatan',
-      state: 'main.cegatan',
+      state: 'home.raid',
       type: 'link',
     },
     {
       name: 'Laporan',
       type: 'link',
-      state: 'main.report',
+      state: 'home.report',
     },
     {
       name: 'Settings',
-      state: 'main.settings',
+      state: 'home.settings',
       type: 'link',
     },
   ]);

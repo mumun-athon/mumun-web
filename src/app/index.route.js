@@ -12,6 +12,24 @@ export function routerConfig($stateProvider, $urlRouterProvider) {
       templateUrl: 'app/main/frontpage/frontpage.html',
       controller: 'FrontpageController',
       controllerAs: 'fc',
+    })
+    .state('home.raid', {
+      url: '/raid',
+      templateUrl: 'app/main/raid/raid.html',
+      controller: 'RaidController',
+      controllerAs: 'rac',
+    })
+    .state('home.report', {
+      url: '/report',
+      templateUrl: 'app/main/report/report.html',
+      controller: 'ReportController',
+      controllerAs: 'rec',
+    })
+    .state('home.settings', {
+      url: '/settings',
+      templateUrl: 'app/main/settings/settings.html',
+      controller: 'SettingsController',
+      controllerAs: 'sc',
     });
 
   $urlRouterProvider.otherwise('/');

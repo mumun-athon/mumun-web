@@ -22,6 +22,10 @@ import { dashboardRouterConfig } from './main/dashboard/dashboard.route';
 import { DashboardController } from './main/dashboard/dashboard.controller';
 import { dashboardRunBlock } from './main/dashboard/dashboard.run';
 
+import { RaidController } from './main/raid/raid.controller';
+import { ReportController } from './main/report/report.controller';
+import { SettingsController } from './main/settings/settings.controller';
+
 angular.module('mumunWeb', [
     'ngAnimate',
     'ngCookies',
@@ -58,4 +62,7 @@ angular.module('mumunWeb', [
   .config(dashboardRouterConfig)
   .controller('DashboardController', DashboardController)
   .controller('FrontpageController', FrontpageController)
+  .controller('RaidController', RaidController)
+  .controller('ReportController', ReportController)
+  .controller('SettingsController', SettingsController)
 	;
