@@ -1,4 +1,10 @@
-export function config($logProvider, toastrConfig, ssSideNavSectionsProvider, $mdThemingProvider) {
+export function config(
+    $logProvider,
+    toastrConfig,
+    ssSideNavSectionsProvider,
+    $mdThemingProvider,
+    localStorageServiceProvider
+  ) {
   'ngInject';
 
   // Enable log
@@ -33,4 +39,5 @@ export function config($logProvider, toastrConfig, ssSideNavSectionsProvider, $m
       type: 'link',
     },
   ]);
+  localStorageServiceProvider.setPrefix('mmn');
 }

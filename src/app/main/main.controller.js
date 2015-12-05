@@ -24,4 +24,8 @@ export class MainController {
     this._authenticated = this.authorization.isAuthenticated;
     return this._authenticated;
   }
+
+  logout() {
+    this.authorization.logout();
+  }
 }

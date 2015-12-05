@@ -39,6 +39,7 @@ angular.module('mumunWeb', [
     'toastr',
     'sasrio.angular-material-sidenav',
     'leaflet-directive',
+		'LocalStorageModule',
   ])
   .constant('malarkey', malarkey)
   .constant('moment', moment)
