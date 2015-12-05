@@ -80,7 +80,6 @@ export class LoginFormController {
     this.authorization.login(creds)
       .then(
       response => {
-        console.log(response);
         let user = response && response.data || {};
         this.$log.log('login succeed', user);
         this.toastr.success('You are logged in!\nWelcome ' + (user.name || 'Mister') + '!');

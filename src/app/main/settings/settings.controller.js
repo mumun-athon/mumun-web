@@ -1,5 +1,5 @@
 export class SettingsController {
-  constructor(authorization) {
+  constructor() {
     'ngInject';
 
   }

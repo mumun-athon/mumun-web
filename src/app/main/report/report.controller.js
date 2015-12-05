@@ -1,5 +1,5 @@
 export class ReportController {
-  constructor(authorization) {
+  constructor() {
     'ngInject';
     this.tableData = [
       {

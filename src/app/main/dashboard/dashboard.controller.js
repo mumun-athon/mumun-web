@@ -1,5 +1,5 @@
 export class DashboardController {
-  constructor(authorization) {
+  constructor() {
     'ngInject';
 
   }

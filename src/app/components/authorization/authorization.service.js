@@ -34,10 +34,10 @@ export class AuthorizationService {
 
   logout() {
     return this.data.request({
-      method: 'POST',
+      method: 'GET',
       url: '/auth/logout',
     })
-    .then(response => {
+    .then(() => {
       this.session.destroy();
       this.localStorageService.set('user', null);
       this.selectedAuthStatus = 'logoutSuccess';

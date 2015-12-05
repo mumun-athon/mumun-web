@@ -1,5 +1,5 @@
 export class RaidController {
-  constructor(authorization) {
+  constructor() {
     'ngInject';
 
   }

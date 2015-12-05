@@ -1,4 +1,4 @@
-export function dashboardRouterConfig($stateProvider, $urlRouterProvider) {
+export function dashboardRouterConfig($stateProvider) {
   'ngInject';
   $stateProvider
     .state('home.dashboard', {
