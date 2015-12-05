@@ -9,6 +9,8 @@ import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service'
 import { NavbarDirective } from '../app/components/navbar/navbar.directive';
 import { MalarkeyDirective } from '../app/components/malarkey/malarkey.directive';
 
+import { panelWidgetDirective } from '../app/components/panel-widget/panel-widget.directive';
+
 import { DataService } from '../app/components/data/data.service';
 import { SessionService } from '../app/components/session/session.service';
 import { AuthorizationService } from '../app/components/authorization/authorization.service';
@@ -32,6 +34,7 @@ angular.module('mumunWeb', [
     'ngMaterial',
     'toastr',
     'sasrio.angular-material-sidenav',
+    'leaflet-directive',
   ])
   .constant('malarkey', malarkey)
   .constant('moment', moment)
@@ -50,6 +53,7 @@ angular.module('mumunWeb', [
 	.service('session', SessionService)
 	.service('authorization', AuthorizationService)
   .directive('loginButton', LoginButtonDirective)
+  .directive('panelWidget', panelWidgetDirective)
 
   .config(dashboardRouterConfig)
   .controller('DashboardController', DashboardController)

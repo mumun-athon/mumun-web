@@ -18,8 +18,6 @@ export class MainController {
     if (this.authorization.isAuthenticated) {
       $state.go('home.dashboard');
     }
-
-    this.ssSideNav.setVisible('link_3', false);
   }
 
   get authenticated() {
