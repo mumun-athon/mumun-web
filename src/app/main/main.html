@@ -9,7 +9,18 @@
         authenticated="main.authenticated">
       </acme-navbar>
     </header>
-    <ui-view />
+    <md-sidenav ng-if="main.authenticated" class="md-sidenav-left md-whiteframe-z2"
+      md-component-id="left"
+      md-is-locked-open="$mdMedia('gt-md')">
+
+      <md-content flex role="navigation" ss-style-color="{'background-color': 'primary.default'}">
+          <ss-sidenav flex menu="main.ssSideNav"></ss-sidenav>
+      </md-content>
+    </md-sidenav>
+
+    <div layout="column" flex role="main">
+        <div ui-view layout="column"></div>
+    </div>
   </md-content>
 
 </div>

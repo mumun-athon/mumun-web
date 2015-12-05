@@ -20,7 +20,19 @@ import { dashboardRouterConfig } from './main/dashboard/dashboard.route';
 import { DashboardController } from './main/dashboard/dashboard.controller';
 import { dashboardRunBlock } from './main/dashboard/dashboard.run';
 
-angular.module('mumunWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'ngMaterial', 'toastr'])
+angular.module('mumunWeb', [
+    'ngAnimate',
+    'ngCookies',
+    'ngTouch',
+    'ngSanitize',
+    'ngMessages',
+    'ngAria',
+    'ngResource',
+    'ui.router',
+    'ngMaterial',
+    'toastr',
+    'sasrio.angular-material-sidenav',
+  ])
   .constant('malarkey', malarkey)
   .constant('moment', moment)
   .config(config)
