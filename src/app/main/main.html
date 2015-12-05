@@ -1,15 +1,16 @@
-<div layout="vertical" layout-fill>
-
-  <md-content>
-    <header>
-      <acme-navbar
-      	creation-date="main.creationDate"
-      	app-url="main.appUrl"
-      	app-name="main.appName"
-        authenticated="main.authenticated">
-      </acme-navbar>
-    </header>
-    <md-sidenav ng-if="main.authenticated" class="md-sidenav-left md-whiteframe-z2"
+  <header>
+    <acme-navbar
+    	creation-date="main.creationDate"
+    	app-url="main.appUrl"
+    	app-name="main.appName"
+      authenticated="main.authenticated">
+    </acme-navbar>
+  </header>
+  <div layout="column" flex role="main">
+    <md-sidenav
+      flex
+      ng-if="main.authenticated"
+      class="md-sidenav-left md-whiteframe-z2"
       md-component-id="left"
       md-is-locked-open="$mdMedia('gt-md')">
 
@@ -17,10 +18,5 @@
           <ss-sidenav flex menu="main.ssSideNav"></ss-sidenav>
       </md-content>
     </md-sidenav>
-
-    <div layout="column" flex role="main">
-        <div ui-view layout="column"></div>
-    </div>
-  </md-content>
-
-</div>
+    <div ui-view flex layout="column"></div>
+  </div>

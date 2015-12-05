@@ -1,4 +1,4 @@
-export class DashboardController {
+export class RaidController {
   constructor(authorization) {
     'ngInject';
 

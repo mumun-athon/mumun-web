@@ -6,7 +6,7 @@ export function panelWidgetDirective() {
       scope: { title: '@', template: '@', options: '@' },
       template: '' +
                 '<section layout-margin class="md-whiteframe-z1 panel-widget">' +
-                '  <md-toolbar md-theme="custom" class="md-hue-1 panel-widget-toolbar">' +
+                '  <md-toolbar class="md-hue-1 panel-widget-toolbar">' +
                 '    <div class="md-toolbar-tools">' +
                 '      <h3 class="panel-widget-tittle">{{title}}</h3>' +
                 '      <span flex></span>' +
