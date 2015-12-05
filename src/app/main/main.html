@@ -1,35 +1,22 @@
-<div layout="column" layout-wrap>
+<header>
+ <acme-navbar
+ 	creation-date="main.creationDate"
+ 	app-url="main.appUrl"
+ 	app-name="main.appName"
+   authenticated="main.authenticated">
+ </acme-navbar>
+</header>
+<div layout="column" flex role="main">
+ <md-sidenav
+   flex
+   ng-if="main.authenticated"
+   class="md-sidenav-left md-whiteframe-z2"
+   md-component-id="left"
+   md-is-locked-open="$mdMedia('gt-md')">
 
-  <md-content>
-    <header>
-      <acme-navbar
-      	creation-date="main.creationDate"
-      	app-url="main.appUrl"
-      	app-name="main.appName"
-        authenticated="main.authenticated">
-      </acme-navbar>
-    </header>
-    <ui-view />
-
-  </md-content>
-
-  <section class="jumbotron">
-
-    <p class="lead">
-      Mengatur cegatan dengan mudah.
-    </p>
-    <p>
-      With ♥ thanks to the contributions of<acme-malarkey extra-values="['Yeoman', 'Gulp', 'Angular']"></acme-malarkey>
-    </p>
-  </section>
-
-</div>
-
-<div layout="row" layout-sm="column">
-  <div flex>
-    I'm above on mobile, and to the left on larger devices.
-  </div>
-  <div flex>
-    I'm below on mobile, and to the right on larger devices.
-  </div>
+   <md-content flex role="navigation" ss-style-color="{'background-color': 'primary.default'}">
+       <ss-sidenav flex menu="main.ssSideNav"></ss-sidenav>
+   </md-content>
+ </md-sidenav>
+ <div ui-view flex layout="column"></div>
 </div>

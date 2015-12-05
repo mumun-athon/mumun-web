@@ -1,4 +1,4 @@
-export function config($logProvider, toastrConfig) {
+export function config($logProvider, toastrConfig, ssSideNavSectionsProvider, $mdThemingProvider) {
   'ngInject';
 
   // Enable log
@@ -10,4 +10,27 @@ export function config($logProvider, toastrConfig) {
   toastrConfig.positionClass = 'toast-top-right';
   toastrConfig.preventDuplicates = true;
   toastrConfig.progressBar = true;
+  ssSideNavSectionsProvider.initWithTheme($mdThemingProvider);
+  ssSideNavSectionsProvider.initWithSections([
+    {
+      name: 'Dashboard',
+      state: 'home.dashboard',
+      type: 'link',
+    },
+    {
+      name: 'Cegatan',
+      state: 'home.raid',
+      type: 'link',
+    },
+    {
+      name: 'Laporan',
+      type: 'link',
+      state: 'home.report',
+    },
+    {
+      name: 'Settings',
+      state: 'home.settings',
+      type: 'link',
+    },
+  ]);
 }

@@ -9,16 +9,37 @@ import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service'
 import { NavbarDirective } from '../app/components/navbar/navbar.directive';
 import { MalarkeyDirective } from '../app/components/malarkey/malarkey.directive';
 
+import { panelWidgetDirective } from '../app/components/panel-widget/panel-widget.directive';
+
 import { DataService } from '../app/components/data/data.service';
 import { SessionService } from '../app/components/session/session.service';
 import { AuthorizationService } from '../app/components/authorization/authorization.service';
 import { LoginButtonDirective } from '../app/components/login/login-button.directive';
 
+import { FrontpageController } from './main/frontpage/frontpage.controller';
+
 import { dashboardRouterConfig } from './main/dashboard/dashboard.route';
 import { DashboardController } from './main/dashboard/dashboard.controller';
 import { dashboardRunBlock } from './main/dashboard/dashboard.run';
 
-angular.module('mumunWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'ngMaterial', 'toastr'])
+import { RaidController } from './main/raid/raid.controller';
+import { ReportController } from './main/report/report.controller';
+import { SettingsController } from './main/settings/settings.controller';
+
+angular.module('mumunWeb', [
+    'ngAnimate',
+    'ngCookies',
+    'ngTouch',
+    'ngSanitize',
+    'ngMessages',
+    'ngAria',
+    'ngResource',
+    'ui.router',
+    'ngMaterial',
+    'toastr',
+    'sasrio.angular-material-sidenav',
+    'leaflet-directive',
+  ])
   .constant('malarkey', malarkey)
   .constant('moment', moment)
   .config(config)
@@ -36,7 +57,12 @@ angular.module('mumunWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', '
 	.service('session', SessionService)
 	.service('authorization', AuthorizationService)
   .directive('loginButton', LoginButtonDirective)
+  .directive('panelWidget', panelWidgetDirective)
 
   .config(dashboardRouterConfig)
   .controller('DashboardController', DashboardController)
+  .controller('FrontpageController', FrontpageController)
+  .controller('RaidController', RaidController)
+  .controller('ReportController', ReportController)
+  .controller('SettingsController', SettingsController)
 	;

@@ -1,5 +1,5 @@
 export class MainController {
-  constructor(toastr, authorization) {
+  constructor(toastr, authorization, $state, ssSideNav) {
     'ngInject';
 
     this.classAnimation = '';
@@ -7,13 +7,17 @@ export class MainController {
     this.appUrl = 'http://localhost:3000';
     this.appName = 'Cegatan Santai';
     this.toastr = toastr;
+    this.ssSideNav = ssSideNav;
     this.authorization = authorization;
     this._authenticated;
 
-    this.activate();
+    this.activate($state);
   }
 
-  activate() {
+  activate($state) {
+    if (this.authorization.isAuthenticated) {
+      $state.go('home.dashboard');
+    }
   }
 
   get authenticated() {

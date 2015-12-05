@@ -12,12 +12,12 @@ export function dashboardRunBlock($rootScope, authorization, toastr, $state) {
         $rootScope.$broadcast(AUTH_EVENTS.notAuthenticated);
       }
     } */
-    if (next.name !== 'home' && !authorization.isAuthenticated) {
+    if (next.name !== 'home.frontpage' && !authorization.isAuthenticated) {
       event.preventDefault();
       authorization.lastDestination = next.name;
       $rootScope.$broadcast(authorization.authStatuses.notAuthenticated);
       toastr.error('Access denied. You are not logged in.');
-      $state.go('home');
+      $state.go('home.frontpage');
     }
   });
 }
