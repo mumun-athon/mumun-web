@@ -1,8 +1,38 @@
-<section class="jumbotron">
-	<p class="lead">
-		Mengatur cegatan dengan mudah.
-	</p>
-	<p>
+
+<div class="login-overlay">
+   <h1 class="site-title">Cegat<span>IN</span></h1>
+
+   <p class="site-des">
+      Check dan Laport <span>CEGATAN</span> Ilegal.
+   </p>
+
+   <section flex layout="row" layout-align="center center" ng-controller="LoginFormController as vm" >
+      <div ng-view="vm.showLoginForm()"></div>
+
+      <!-- <login-button ng-if="!vm.authenticated"></login-button>
+      <md-button ng-if="vm.authenticated" ng-click="vm.logout()" class="md-raised">Logout</md-button> -->
+
+      <md-input-container>
+         <label>Email</label>
+         <input ng-model="vm.credentials.email">
+      </md-input-container>
+      <md-input-container>
+         <label>Password</label>
+         <input ng-model="vm.credentials.password" type="password">
+      </md-input-container>
+
+      <md-dialog-actions layout="row">
+         <md-button ng-click="vm.login(vm.credentials)" class="md-raised">Login</md-button>
+         <md-button ng-click="vm.cancel()" class="md-raised">Cancel</md-button>
+      </md-dialog-actions>
+
+   </section>
+
+</div>
+
+
+<footer class="copyright" layout="column" layout-align="center center">
+	<p class="contributor">
 		With ♥ thanks to the contributions of<acme-malarkey extra-values="['Yeoman', 'Gulp', 'Angular']"></acme-malarkey>
 	</p>
-</section>
+</footer>

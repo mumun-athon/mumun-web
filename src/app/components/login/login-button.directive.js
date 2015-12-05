@@ -44,7 +44,7 @@ class LoginButtonController {
   }
 }
 
-class LoginFormController {
+export class LoginFormController {
   constructor(authorization, session, $log, toastr, $mdDialog, $scope, $state) {
     'ngInject';
 

@@ -6,6 +6,12 @@
 // endbower
 
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,400italic);
+
+// Variable
+// ======================================================================== /
+$font_body: 'Open Sans', sans-serif;
+$font_head: 'Roboto Slab', sans-serif;
 
 @font-face {
   font-family: 'Material Icons';
@@ -44,8 +50,15 @@
   font-feature-settings: 'liga';
 }
 
+
 html {
   font-family: 'Roboto Slab', serif;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+body{
+
 }
 
 [layout=row] {

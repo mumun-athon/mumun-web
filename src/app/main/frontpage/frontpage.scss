@@ -1,0 +1,46 @@
+.login-overlay{
+   height: 100%;
+   text-align: center;
+
+   .site-title{
+      text-transform: uppercase;
+      margin-bottom: 0;
+      font-size: 4rem;
+      font-weight: 400;
+
+      span{
+         font-weight: 700;
+         color: #E21515;
+      }
+   }
+
+   .site-des{
+      margin-top: 0;
+      font-family: $font_body;
+      font-size: 1.6rem;
+
+      span{
+         font-family: $font_head;
+         font-weight: 800;
+         letter-spacing: 0px;
+         color: #E21515;
+      }
+   }
+}
+
+
+.copyright{
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   font-family: $font_body;
+   font-size: 1.5rem;
+   font-weight: 600;
+   background-color: #E0E0E0;
+   padding: 15px 30px;
+
+   .contributor{
+      color: #4A4A4A;
+   }
+}

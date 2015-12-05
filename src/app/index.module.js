@@ -14,7 +14,7 @@ import { panelWidgetDirective } from '../app/components/panel-widget/panel-widge
 import { DataService } from '../app/components/data/data.service';
 import { SessionService } from '../app/components/session/session.service';
 import { AuthorizationService } from '../app/components/authorization/authorization.service';
-import { LoginButtonDirective } from '../app/components/login/login-button.directive';
+import { LoginButtonDirective, LoginFormController } from '../app/components/login/login-button.directive';
 
 import { FrontpageController } from './main/frontpage/frontpage.controller';
 
@@ -60,6 +60,7 @@ angular.module('mumunWeb', [
   .directive('panelWidget', panelWidgetDirective)
 
   .config(dashboardRouterConfig)
+  .controller('LoginFormController', LoginFormController)
   .controller('DashboardController', DashboardController)
   .controller('FrontpageController', FrontpageController)
   .controller('RaidController', RaidController)
