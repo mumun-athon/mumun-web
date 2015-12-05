@@ -1,16 +1,22 @@
+// Login Overlay Style
+// ======================================================================== /
 .login-overlay{
-   height: 100%;
-   text-align: center;
+   height: 88vh;
+   min-height: 500px;
+   background-color: #18335F;
+   color: #FFFFFF;
 
    .site-title{
       text-transform: uppercase;
       margin-bottom: 0;
       font-size: 4rem;
       font-weight: 400;
+      text-align: center;
+      text-shadow: 0px 3px 3px #10264A;
 
       span{
          font-weight: 700;
-         color: #E21515;
+         color: #2B7CFF;
       }
    }
 
@@ -18,29 +24,68 @@
       margin-top: 0;
       font-family: $font_body;
       font-size: 1.6rem;
+      text-align: center;
+      text-shadow: 0px 3px 3px #10264A;
 
       span{
          font-family: $font_head;
          font-weight: 800;
          letter-spacing: 0px;
-         color: #E21515;
+         color: #2B7CFF;
       }
    }
 }
 
+// Style Form Login
+// ======================================================================== /
+#form_login{
+   position: relative;
+   top: 50px;
+   width: 320px;
+   margin: 0 auto;
+   padding: 20px;
+   border-radius: 2px;
+   background-color: #fff;
+   box-shadow: 1px 1px 7px 0 rgb(24, 51, 95);
 
+   .login_text{
+      text-transform: uppercase;
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-top: -5px;
+      color: #136DFD;
+   }
+
+   label{
+      font-size: 1.4rem;
+   }
+
+   .link{
+      text-align: center;
+      margin: 15px auto 0;
+
+      button{
+         // font-family: $font_body;
+         background-color: rgb(43, 124, 255);
+         color: #FFFFFF;
+         font-weight: 700;
+         letter-spacing: 1px;
+      }
+   }
+}
+
+// Copyrught Style
+// ======================================================================== /
 .copyright{
-   position: fixed;
-   bottom: 0;
-   left: 0;
    width: 100%;
    font-family: $font_body;
    font-size: 1.5rem;
    font-weight: 600;
-   background-color: #E0E0E0;
+   background-color: #0E2448;
    padding: 15px 30px;
 
    .contributor{
-      color: #4A4A4A;
+      color: #fff;
    }
 }

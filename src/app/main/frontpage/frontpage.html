@@ -6,25 +6,25 @@
       Check dan Laport <span>CEGATAN</span> Ilegal.
    </p>
 
-   <section flex layout="row" layout-align="center center" ng-controller="LoginFormController as vm" >
-      <div ng-view="vm.showLoginForm()"></div>
+   <section id="form_login" layout="column" ng-controller="LoginFormController as vm" >
+      <md-content layout-padding>
+         <p class="login_text">Login</p>
+      <form class="" action="" method="post" >
+         <md-input-container>
+            <label>Email</label>
+            <input ng-model="vm.credentials.email">
+         </md-input-container>
+         <md-input-container>
+            <label>Password</label>
+            <input ng-model="vm.credentials.password" type="password">
+         </md-input-container>
+      </form>
 
-      <!-- <login-button ng-if="!vm.authenticated"></login-button>
-      <md-button ng-if="vm.authenticated" ng-click="vm.logout()" class="md-raised">Logout</md-button> -->
+      <div class="link">
+         <md-button ng-click="vm.login(vm.credentials)" class="md-raised primary">Login</md-button>
+      </div>
 
-      <md-input-container>
-         <label>Email</label>
-         <input ng-model="vm.credentials.email">
-      </md-input-container>
-      <md-input-container>
-         <label>Password</label>
-         <input ng-model="vm.credentials.password" type="password">
-      </md-input-container>
-
-      <md-dialog-actions layout="row">
-         <md-button ng-click="vm.login(vm.credentials)" class="md-raised">Login</md-button>
-         <md-button ng-click="vm.cancel()" class="md-raised">Cancel</md-button>
-      </md-dialog-actions>
+      </md-content>
 
    </section>
 
