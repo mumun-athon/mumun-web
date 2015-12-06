@@ -7,21 +7,27 @@
 </acme-navbar>
 </header>
 
-<div layout="row" flex role="main">
-   <md-sidenav
+<section layout="row" flex role="main">
+   <md-sidenav id="main-sidebar" class="md-sidenav-left md-whiteframe-z2" md-component-id="left"
    flex
    ng-if="main.authenticated"
    class="md-sidenav-right md-whiteframe-z2"
    md-component-id="left"
    md-is-locked-open="$mdMedia('gt-md')">
 
-   <md-content flex role="navigation" ss-style-color="{'background-color': 'primary.default'}">
-      <ss-sidenav flex menu="main.ssSideNav"></ss-sidenav>
-   </md-content>
+      <md-content flex role="navigation" ss-style-color="{'background-color': '#18335F'}">
+         <ss-sidenav flex menu="main.ssSideNav"></ss-sidenav>
+      </md-content>
 
    </md-sidenav>
 
-   <div ui-view flex layout="column">
+   <div ui-view flex layout="column" layout-padding>
    </div>
 
-</div>
+</section>
+
+<footer class="copyright" layout="column" layout-align="center center">
+	<p class="contributor">
+		With ♥ thanks to the contributions of<acme-malarkey extra-values="['Yeoman', 'Gulp', 'Angular']"></acme-malarkey>
+	</p>
+</footer>

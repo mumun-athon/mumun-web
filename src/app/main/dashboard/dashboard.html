@@ -1,47 +1,58 @@
 
-<div layout-gt-md="column" flex>
+<div id="main-content" layout-gt-md="column" flex>
 
-   <!-- cegatan -->
-	<div flex class="fixed-height-widget">
-		<section layout-margin class="md-whiteframe-z1 panel-widget">
-			<md-toolbar class="md-hue-1 panel-widget-toolbar">
-			  <div class="md-toolbar-tools">
-             <i class="material-icons">location_on</i>
-			    <h3 class="panel-widget-tittle">Peta</h3>
-			  </div>
-			</md-toolbar>
-			<leaflet lf-center="dc.center" markers="dc.markers" height="480px" width="100%"></leaflet>
-		</section>
-	</div>
-	<!-- end of cegatan -->
+   <md-content>
+
+      <!-- cegatan -->
+   	<div flex class="fixed-height-widget">
+   		<section layout-margin class="md-whiteframe-z1 panel-widget">
+   			<md-toolbar class="md-hue-1 panel-widget-toolbar">
+   			  <div class="md-toolbar-tools">
+   			    <h3 class="panel-widget-tittle">
+                   <i class="material-icons">location_on</i> Peta
+                </h3>
+   			  </div>
+   			</md-toolbar>
+   			<leaflet lf-center="dc.center" markers="dc.markers" height="480px" width="100%"></leaflet>
+   		</section>
+   	</div>
+   	<!-- end of cegatan -->
+
+   </md-content>
+
+   <md-content>
 
 	<!-- laporan -->
-  <div layout-gt-md="row">
+      <div layout-gt-md="row" >
 
-		<div flex class="fixed-height-widget">
-			<section layout-margin class="md-whiteframe-z1 panel-widget">
-				<md-toolbar class="md-hue-1 panel-widget-toolbar">
-				  <div class="md-toolbar-tools">
-               <i class="material-icons">assessment</i>
-				   <h3 class="panel-widget-tittle">Laporan</h3>
-				  </div>
-				</md-toolbar>
-				<h4>{{dc.laporan}} Laporan</h4>
-			</section>
-		</div>
+         <div flex class="fixed-height-widget">
+            <section layout-margin class="md-whiteframe-z1 panel-widget">
+               <md-toolbar class="md-hue-1 panel-widget-toolbar">
+                  <div class="md-toolbar-tools">
+                     <h3 class="panel-widget-tittle">
+                        <i class="material-icons">assessment</i> Laporan
+                     </h3>
+                  </div>
+               </md-toolbar>
+               <h4>{{dc.laporan}} Laporan</h4>
+            </section>
+         </div>
 
-		<div flex class="fixed-height-widget">
-			<section layout-margin class="md-whiteframe-z1 panel-widget">
-				<md-toolbar class="md-hue-1 panel-widget-toolbar">
-				  <div class="md-toolbar-tools">
-                 <i class="material-icons">my_location</i>
-				    <h3 class="panel-widget-tittle">Cegatan</h3>
-				  </div>
-				</md-toolbar>
-				<h4>{{dc.cegatan}} Cegatan</h4>
-			</section>
-		</div>
-      
-  </div>
+         <div flex class="fixed-height-widget">
+            <section layout-margin class="md-whiteframe-z1 panel-widget">
+               <md-toolbar class="md-hue-1 panel-widget-toolbar">
+                  <div class="md-toolbar-tools" layout-padding>
+                     <h3 class="panel-widget-tittle">
+                        <i class="material-icons">my_location</i> Cegatan
+                     </h3>
+                  </div>
+               </md-toolbar>
+               <h4>{{dc.cegatan}} Cegatan</h4>
+            </section>
+         </div>
+
+      </div>
+
+  </md-content>
 
 </div>

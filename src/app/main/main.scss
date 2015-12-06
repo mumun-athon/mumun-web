@@ -1,0 +1,39 @@
+$main_bg: #18335F;
+$color_p: #2B7CFF;
+$w: #FFFFFF;
+$shadow: 0px 3px 3px #10264A;
+
+
+// Main Sidebar
+// ======================================================================== /
+#main-sidebar{
+   box-shadow: none;
+
+   md-content{
+      min-height: 100vh;
+      background-color: $main_bg;
+
+      .menu{
+
+         li{
+            border-bottom: 1px solid rgba(26, 86, 185, 0.18) !important;
+         }
+
+         .md-button{
+            min-height: 55px;
+            line-height: 55px;
+            background-color: $main_bg;
+            font-weight: 700;
+            letter-spacing: 1px;
+         }
+      }
+
+      .md-raised {
+         // background-color: $main_bg !important;
+
+         &:hover{
+            background-color: #fff;
+         }
+      }
+   }
+}
