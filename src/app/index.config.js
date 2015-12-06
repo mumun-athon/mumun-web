@@ -11,6 +11,19 @@ export function config(
   // Enable log
   $logProvider.debugEnabled(true);
   $httpProvider.defaults.useXDomain = true;
+  $httpProvider.interceptors.push(function($location, localStorageService) {
+    return {
+      request: function(config) {
+        let token = localStorageService.get('token');
+        config.headers = config.headers || {};
+        if (token) {
+          config.headers['X-AUTH-TOKEN'] = token;
+        }
+
+        return config;
+      },
+    };
+  });
 
   // Set options third-party lib
   toastrConfig.allowHtml = true;
