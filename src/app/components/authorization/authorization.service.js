@@ -25,9 +25,10 @@ export class AuthorizationService {
       data: cred,
     })
     .then(response => {
-      let user = response.data;
+      let user = response.data.user;
       this.session.create(user);
       this.localStorageService.set('user', user);
+      this.localStorageService.set('token', user.x_auth_token);
       return response;
     });
   }
@@ -40,6 +41,7 @@ export class AuthorizationService {
     .then(() => {
       this.session.destroy();
       this.localStorageService.set('user', null);
+      this.localStorageService.set('token', null);
       this.selectedAuthStatus = 'logoutSuccess';
       this.$state.go('home.frontpage');
     });
