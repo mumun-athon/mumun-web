@@ -15,7 +15,7 @@ export class MainController {
   }
 
   activate($state) {
-    if (this.authorization.isAuthenticated) {
+    if (this.authorization.isAuthenticated && $state.current.name === 'home.frontpage') {
       $state.go('home.dashboard');
     }
   }
