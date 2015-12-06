@@ -1,7 +1,37 @@
 <div layout-gt-md="row">
-  <panel-widget flex title="Cegatan" template="app/views/partials/peta.html" class="fixed-height-widget"></panel-widget>
+	<!-- cegatan -->
+	<div flex class="fixed-height-widget">
+		<section layout-margin class="md-whiteframe-z1 panel-widget">
+			<md-toolbar class="md-hue-1 panel-widget-toolbar">
+			  <div class="md-toolbar-tools">
+			    <h3 class="panel-widget-tittle">Peta</h3>
+			  </div>
+			</md-toolbar>
+			<leaflet lf-center="dc.center" markers="dc.markers" height="480px" width="100%"></leaflet>
+		</section>
+	</div>
+	<!-- end of cegatan -->
+	<!-- laporan -->
   <div layout-gt-md="column">
-    <panel-widget flex title="Laporan" template="app/views/partials/laporan.html" class="fixed-height-widget"></panel-widget>
-    <panel-widget flex title="Cegatan" template="app/views/partials/cegatan.html" class="fixed-height-widget"></panel-widget>
+		<div flex class="fixed-height-widget">
+			<section layout-margin class="md-whiteframe-z1 panel-widget">
+				<md-toolbar class="md-hue-1 panel-widget-toolbar">
+				  <div class="md-toolbar-tools">
+				    <h3 class="panel-widget-tittle">Laporan</h3>
+				  </div>
+				</md-toolbar>
+				<h4>{{dc.laporan}} Laporan</h4>
+			</section>
+		</div>
+		<div flex class="fixed-height-widget">
+			<section layout-margin class="md-whiteframe-z1 panel-widget">
+				<md-toolbar class="md-hue-1 panel-widget-toolbar">
+				  <div class="md-toolbar-tools">
+				    <h3 class="panel-widget-tittle">Cegatan</h3>
+				  </div>
+				</md-toolbar>
+				<h4>{{dc.cegatan}} Cegatan</h4>
+			</section>
+		</div>
   </div>
 </div>

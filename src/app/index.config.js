@@ -1,5 +1,6 @@
 export function config(
     $logProvider,
+    $httpProvider,
     toastrConfig,
     ssSideNavSectionsProvider,
     $mdThemingProvider,
@@ -9,6 +10,7 @@ export function config(
 
   // Enable log
   $logProvider.debugEnabled(true);
+  $httpProvider.defaults.useXDomain = true;
 
   // Set options third-party lib
   toastrConfig.allowHtml = true;
