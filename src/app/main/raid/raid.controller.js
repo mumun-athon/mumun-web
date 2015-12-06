@@ -64,18 +64,10 @@ export class RaidController {
       description: raids.description,
       locations: locations,
     };
-
-    let fd = new FormData();
-    fd.append('doc_number', raids.docNumber);
-    fd.append('start_date', moment(raids.startDate).format('YYYY-MM-DD'));
-    fd.append('end_date', moment(raids.endDate).format('YYYY-MM-DD'));
-    fd.append('description', raids.description);
-    fd.append('locations', JSON.stringify(locations));
     this.data.request({
       method: 'POST',
       url: '/raids',
       data: data,
-      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
     })
     .then(() => {
       this.toastr.success('Data berhasil ditambahkan.');
