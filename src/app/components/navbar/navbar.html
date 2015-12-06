@@ -1,7 +1,29 @@
-<md-toolbar ng-if="vm.authenticated" layout="row" layout-align="left center">
-  <md-button ng-href="{{vm.appUrl}}">{{vm.appName}}</md-button>
-  <section flex layout="row" layout-align="left center">
-		<!-- <login-button ng-if="!vm.authenticated"></login-button> -->
-		<md-button ng-click="vm.logout()" class="md-raised">Logout</md-button>
-  </section>
-</md-toolbar>
+<md-toolbar ng-if="vm.authenticated">
+   <div class="md-toolbar-tools">
+
+      <md-button ng-href="{{vm.appUrl}}">{{vm.appName}}</md-button>
+
+     <md-button class="toolbar-button" aria-label="Search">
+        <i class="material-icons">search</i>
+     </md-button>
+
+     <md-button class="toolbar-button" aria-label="Notifications">
+        <i class="material-icons">notifications</i>
+        <span class="notifications-label">7</span>
+     </md-button>
+
+     <md-menu>
+
+        <md-button class="md-icon-button" ng-click="$mdOpenMenu()" aria-label="Open Menu">
+         <i class="material-icons">more_vert</i>
+        </md-button>
+
+         <md-menu-content>
+           <md-menu-item><md-button ng-click="">Profile</md-button></md-menu-item>
+           <md-menu-item><md-button ng-click="vm.logout()">Log out</md-button></md-menu-item>
+         </md-menu-content>
+
+      </md-menu>
+
+   </div>
+ </md-toolbar>
