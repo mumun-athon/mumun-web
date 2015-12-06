@@ -64,6 +64,10 @@ body{
 
 }
 
+input, label, textarea{
+   font-size: 1.6rem;
+}
+
 [layout=row] {
   flex-direction: row;
 }
