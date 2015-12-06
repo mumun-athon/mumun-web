@@ -5,7 +5,7 @@ export class MainController {
     this.classAnimation = '';
     this.creationDate = 1449019394801;
     this.appUrl = 'http://localhost:3000';
-    this.appName = 'Cegatan Santai';
+    this.appName = 'Cegatin';
     this.toastr = toastr;
     this.ssSideNav = ssSideNav;
     this.authorization = authorization;

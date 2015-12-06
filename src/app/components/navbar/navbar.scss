@@ -1,3 +1,40 @@
+// Variable
+// ======================================================================== /
+$main_bg: #18335F;
+$color_p: #2B7CFF;
+$w: #FFFFFF;
+$shadow: 0px 3px 3px #10264A;
+
+.main-nav{
+
+   .site-title-dashbord{
+      color: $w;
+      text-transform: uppercase;
+      text-shadow: $shadow;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+
+      span{
+         color: $color_p;
+         font-weight: 700;
+         text-shadow: $shadow;
+      }
+   }
+
+   .md-toolbar-tools{
+      background-color: $main_bg;
+
+   }
+
+   .material-icons{
+      color: $w;
+      text-shadow: $shadow;
+   }
+
+}
+
+
+
 .acme-navbar-text{
   color: white;
 }
