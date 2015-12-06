@@ -56,6 +56,12 @@ export class LoginFormController {
     this.$mdDialog = $mdDialog;
     this.toastr = toastr;
     this._selectedAuthStatus;
+
+    this.credentials = {
+      email: 'dilbadil@localhost.com',
+      password: 'qweasd123',
+    };
+
     this.activate();
   }
 
@@ -86,11 +92,6 @@ export class LoginFormController {
         this.$mdDialog.hide();
         this.selectedAuthStatus = 'loginSuccess';
         this.$state.go(this.authorization.lastDestination || 'home.dashboard');
-      },
-
-      response => {
-        this.$log.log('login failed', response);
-        this.toastr.error('Whoops! Something somewhere errored &@(&^!)$@\n' + (response.data.message || 'Unknown reason') + '!');
       });
   }
 
