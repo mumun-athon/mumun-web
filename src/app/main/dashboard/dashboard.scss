@@ -58,3 +58,8 @@ $shadow: 0px 3px 3px #10264A;
    height: 40px;
    padding: 0 20px;
 }
+
+.leaflet-google-layer {
+	width: 100% !important;
+	min-width: 1024px;
+}
