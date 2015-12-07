@@ -14,7 +14,7 @@
     </md-content>
 
     <md-content layout-padding layout="row" layout-sm="column">
-      <div layout="row">
+      <div layout="row" flex="75">
          <form name="raidForm">
            <div layout="column">
 
@@ -35,11 +35,11 @@
            </div>
          </form>
       </div>
-    </md-content>
-
-    <md-content layout="row" layout-sm="column">
-         <md-button ng-click="rac.addRaids(rac.newRaid)" aria-label="Add" class="md-raised md-primary">
+      <div layout="row" flex="20">
+         <md-button ng-click="rac.addRaids(rac.newRaid)" aria-label="Add" class="md-raised md-primary add-peta">
          <i class="material-icons">send</i> Tambahkan</md-button>
+      </div>
+
     </md-content>
 
   </section>

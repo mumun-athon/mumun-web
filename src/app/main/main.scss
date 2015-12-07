@@ -23,32 +23,6 @@ $shadow: 0px 3px 3px #10264A;
          li{
             position: relative;
             border-bottom: 1px solid rgba(40, 53, 147, 0.42) !important;
-
-            &:nth-child(n)::before{
-               font-family: 'Material Icons';
-                font-weight: normal;
-                font-style: normal;
-                font-size: 24px;
-                display: inline-block;
-                width: 1em;
-                height: 1em;
-                line-height: 1;
-                text-transform: none;
-                letter-spacing: normal;
-                word-wrap: normal;
-                -webkit-font-smoothing: antialiased;
-                text-rendering: optimizeLegibility;
-                -moz-osx-font-smoothing: grayscale;
-                -webkit-font-feature-settings: 'liga';
-                font-feature-settings: 'liga';
-            }
-
-            &:nth-child(1)::before{
-               content: "\f367";
-               position: absolute;
-               left: 0;
-               bottom: 0;
-            }
          }
 
          .md-button{
