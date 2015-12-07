@@ -2,7 +2,53 @@
    padding: 30px;
 
    md-content{
-      padding: 20px;
       box-shadow: 0 0 1px rgba(0,0,0,.15);
+
+      .md-whiteframe-z1{
+         box-shadow: none;
+      }
+
+      #table{
+         padding: 20px;
+         border-spacing: 0;
+         border-collapse: collapse;
+
+         thead{
+            background: #f2f2f2;
+
+            th{
+               padding: 10px 10px 20px;
+               border: 1px solid #EAEAEA;
+               border-top-width: 0;
+               border-left-width: 0;
+               border-bottom-width: 0;
+            }
+         }
+
+         tr:nth-child(even){
+            background-color: rgba(0,0,0,.025);
+         }
+
+         td{
+            &.foto-lapor{
+               text-align: center;
+               margin: 0 auto;
+            }
+
+            img{
+               width: 80%;
+               height: auto;
+
+            }
+         }
+
+         td, tr{
+            padding: 10px;
+            vertical-align: middle;
+            border: 1px solid #f2f2f2;
+            border-top-width: 0;
+            border-left-width: 0;
+         }
+      }
    }
 }
