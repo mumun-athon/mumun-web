@@ -1,11 +1,17 @@
 <div flex class="fixed-height-widget" layout-padding>
   <section layout-margin class="md-whiteframe-z1 panel-widget">
+
     <md-toolbar class="md-hue-1 panel-widget-toolbar">
       <div class="md-toolbar-tools">
-           <i class="material-icons">location_on</i>
-        <h3 class="panel-widget-tittle">Tambah data cegatan</h3>
+        <h3 class="panel-widget-tittle">
+           <i class="material-icons">location_on</i> Tambah Data Cegatan
+        </h3>
       </div>
     </md-toolbar>
+
+    <md-content layout="column">
+      <leaflet lf-center="rac.center" layers="rac.layers" markers="rac.markers" height="480px"></leaflet>
+    </md-content>
 
     <md-content layout-padding layout="row" layout-sm="column">
       <div layout="row">
@@ -29,15 +35,11 @@
            </div>
          </form>
       </div>
-
     </md-content>
 
     <md-content layout="row" layout-sm="column">
-         <md-button ng-click="rac.addRaids(rac.newRaid)" aria-label="Add" class="md-raised md-primary"> <i class="material-icons">search</i> Tambahkan</md-button>
-    </md-content>
-
-    <md-content layout="column">
-      <leaflet lf-center="rac.center" layers="rac.layers" markers="rac.markers" height="480px"></leaflet>
+         <md-button ng-click="rac.addRaids(rac.newRaid)" aria-label="Add" class="md-raised md-primary">
+         <i class="material-icons">send</i> Tambahkan</md-button>
     </md-content>
 
   </section>

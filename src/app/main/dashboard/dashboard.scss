@@ -6,10 +6,39 @@ $w: #FFFFFF;
 $shadow: 0px 3px 3px #10264A;
 
 #main-content{
+   font-size: 1.5rem;
 
    .md-toolbar-tools{
       background-color: $main_bg;
       color: #fff;
+   }
+
+   .dasbord_2{
+      margin-top: 15px;
+
+      md-toolbar{
+         min-height: 50px;
+      }
+
+      .md-toolbar-tools{
+         height: 50px;
+         max-height: 50px;
+      }
+
+      .panel-widget{
+         background-color: $w;
+      }
+
+      md-content{
+         padding: 20px;
+      }
+   }
+}
+
+.panel-widget-tittle{
+
+   .material-icons{
+      margin-bottom: 5px;
    }
 }
 
@@ -19,4 +48,8 @@ $shadow: 0px 3px 3px #10264A;
 
 .red {
 	background: red;
+}
+
+.leaflet-container {
+   background-color: $w;
 }

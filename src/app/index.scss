@@ -112,8 +112,33 @@ section.jumbotron {
   }
 }
 
+// ========================================================================
+// Side Nav
+// ======================================================================== /
+md-sidenav.md-locked-open{
+   width: 220px;
+   min-width: 220px;
+   max-width: 220px;
+}
+
+
+.md-whiteframe-1dp, .md-whiteframe-z1{
+   box-shadow: 0 0 1px rgba(0,0,0,.15);
+}
+
+.layout-padding, .layout-padding > .flex,
+.layout-padding > .flex-gt-sm,
+.layout-padding > .flex-md,
+.layout-padding > .flex-lt-lg {
+   padding: 20px;
+}
+
 .material-icons {
     vertical-align: middle;
+}
+
+.md-toolbar-tools {
+   background-color: $main_bg;
 }
 
 .toolbar-button {
@@ -128,7 +153,7 @@ section.jumbotron {
     border-radius: 50%;
     position: absolute;
     font-size: 12px;
-    top: 2px;
+   //  top: 2px;
     right: 2px;
     background-color: #E75753
 }
