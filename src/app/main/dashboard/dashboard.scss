@@ -31,7 +31,20 @@ $shadow: 0px 3px 3px #10264A;
 
       md-content{
          padding: 20px;
+
+         &.dash-lap, &.dash-cegatan{
+            font-size: 8rem;
+            font-weight: 700;
+            color: #444;
+
+            span{
+               font-family: $font_body;
+               font-size: 3rem;
+            }
+         }
       }
+
+
    }
 }
 
